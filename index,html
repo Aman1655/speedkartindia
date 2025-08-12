@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speedkart India</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #ff6600;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        main {
+            margin: 20px;
+        }
+        footer {
+            background: #333;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        button {
+            background: #ff6600;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #e65c00;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        🚀 Welcome to Speedkart India
+    </header>
+
+    <main>
+        <h2>Coming Soon!</h2>
+        <p>We are working hard to bring you the best online shopping experience.</p>
+        <button>Shop Now</button>
+    </main>
+
+    <footer>
+        &copy; 2025 Speedkart India. All rights reserved.
+    </footer>
+</body>
+</html>
