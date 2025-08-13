@@ -35,6 +35,7 @@
       overflow: hidden;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       transition: 0.3s;
+      text-align: center;
     }
     .product:hover {
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
@@ -45,18 +46,17 @@
       height: 250px;
       object-fit: cover;
     }
-    .product-details {
-      padding: 15px;
-      text-align: center;
-    }
     .product-details h3 {
-      margin: 0 0 10px;
+      margin: 10px 0;
       font-size: 1.2em;
     }
     .price {
       font-size: 1.3em;
       font-weight: bold;
       color: #333;
+      margin-bottom: 10px;
+    }
+    .buy-btn, .qr-code-container {
       margin-bottom: 10px;
     }
     .buy-btn {
@@ -68,22 +68,32 @@
       border-radius: 5px;
       text-decoration: none;
       font-size: 1em;
-      margin-bottom: 10px;
     }
     .buy-btn:hover {
       background-color: #1da851;
     }
     .qr-code {
-      margin-top: 10px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
       width: 150px;
       height: 150px;
+      margin: auto;
     }
     .scan-text {
       font-size: 0.9em;
       margin-bottom: 5px;
+    }
+
+    /* Hide QR on mobile, show button */
+    @media (max-width: 768px) {
+      .qr-code-container {
+        display: none;
+      }
+    }
+
+    /* Hide button on desktop, show QR */
+    @media (min-width: 769px) {
+      .buy-btn {
+        display: none;
+      }
     }
   </style>
 </head>
@@ -101,8 +111,10 @@
           <h3>Smart Watch</h3>
           <p class="price">₹1,499</p>
           <a class="buy-btn" href="upi://pay?pa=Q712122819@ybl&pn=Speedkart%20India&am=1499&cu=INR" target="_blank">Pay Now</a>
-          <p class="scan-text">Or scan QR to pay:</p>
-          <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=Q712122819@ybl&pn=Speedkart%20India&am=1499&cu=INR" alt="Scan to Pay Smart Watch">
+          <div class="qr-code-container">
+            <p class="scan-text">Scan QR to pay:</p>
+            <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=Q712122819@ybl&pn=Speedkart%20India&am=1499&cu=INR" alt="Scan to Pay Smart Watch">
+          </div>
         </div>
       </div>
 
@@ -113,8 +125,10 @@
           <h3>Wireless Earbuds</h3>
           <p class="price">₹899</p>
           <a class="buy-btn" href="upi://pay?pa=Q712122819@ybl&pn=Speedkart%20India&am=899&cu=INR" target="_blank">Pay Now</a>
-          <p class="scan-text">Or scan QR to pay:</p>
-          <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=Q712122819@ybl&pn=Speedkart%20India&am=899&cu=INR" alt="Scan to Pay Wireless Earbuds">
+          <div class="qr-code-container">
+            <p class="scan-text">Scan QR to pay:</p>
+            <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=Q712122819@ybl&pn=Speedkart%20India&am=899&cu=INR" alt="Scan to Pay Wireless Earbuds">
+          </div>
         </div>
       </div>
 
@@ -125,8 +139,10 @@
           <h3>Fitness Band</h3>
           <p class="price">₹799</p>
           <a class="buy-btn" href="upi://pay?pa=Q712122819@ybl&pn=Speedkart%20India&am=799&cu=INR" target="_blank">Pay Now</a>
-          <p class="scan-text">Or scan QR to pay:</p>
-          <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=Q712122819@ybl&pn=Speedkart%20India&am=799&cu=INR" alt="Scan to Pay Fitness Band">
+          <div class="qr-code-container">
+            <p class="scan-text">Scan QR to pay:</p>
+            <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=Q712122819@ybl&pn=Speedkart%20India&am=799&cu=INR" alt="Scan to Pay Fitness Band">
+          </div>
         </div>
       </div>
 
